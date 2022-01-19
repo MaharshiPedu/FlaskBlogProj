@@ -145,7 +145,7 @@ def user_posts(username):
         .paginate(page=page, per_page=2)
     return render_template('user_posts.html', posts=posts, user=user)
 
-@app.route("reset_password", methods = ['GET', 'POST'])
+@app.route("/reset_password", methods = ['GET', 'POST'])
 def reset_request():
     if current_user.is_authenticated:
         return redirect(url_for('home'))
